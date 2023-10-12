@@ -1,7 +1,36 @@
 <!DOCTYPE html>
 <html>
-<body> 
+<body>
 
-<h1 style="font-size:500%;text-align:center">2048</h1> 
+<h1 style="font-size:500%;text-align:center">Team 5</h1>
+
+
+<center>
+    <a href=namita%20website.html>
+        <img src="namita.jpg" width="400" height="400">
+        </a>
+
+    <a href=pragathi%20website.html>
+        <img src="pragathi.jpg" width="400" height="400">
+        </a>
+        
+
+    <a href=shrika%20website.html>
+        <img src="shrika2.jpg" width="400" height="400">
+        </a>
+</center>
+
+<center>
+    <a href=sonika%20website.html>
+        <img src="sonika.jpg" width="400" height="400">
+        </a>
+        
+    <a href=kavya%20website.html>
+        <img src="kavyamain.jpg" width="400" height="400">
+        </a>
+</center>
+
+
+</body>
 
 </html>
