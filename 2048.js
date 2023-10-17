@@ -186,6 +186,8 @@ function resetGame() {
                 board[r][c] = 0;
         }
     }
+    slideUp();
+    setTwo();
 };
 
 
