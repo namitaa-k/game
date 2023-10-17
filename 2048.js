@@ -64,6 +64,9 @@ document.addEventListener('keyup', (e) => {
         slideDown();
         setTwo();
     }
+    else if (e.code == "KeyR") {
+        resetGame();
+    }
     document.getElementById("score").innerText = score;
 })
 
@@ -175,3 +178,15 @@ function hasEmptyTile() {
     }
     return false;
 }
+function resetGame() {
+    let count = 0;
+    score = 0;
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns; c++) {
+                board[r][c] = 0;
+        }
+    }
+};
+
+
+
