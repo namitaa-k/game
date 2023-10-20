@@ -1,15 +1,18 @@
 var board;
 var score = 0;
+var gamestatus = "On";
 var rows = 4;
 var columns = 4;
+var try_count = 0;
 
 window.onload = function() {
     setGame();
 }
 
+
 function setGame() {
     
-
+    gamestatus="On"; 
     board = [
         [0, 0, 0, 0],
         [0, 0, 0, 0],
@@ -50,24 +53,35 @@ document.addEventListener('keyup', (e) => {
     if (e.code == "ArrowLeft") {
         slideLeft();
         setTwo();
+        try_count = try_count + 1;
     }
     else if (e.code == "ArrowRight") {
         slideRight();
-        setTwo();
+        setTwo();        
+        try_count = try_count + 1;
+
+
     }
     else if (e.code == "ArrowUp") {
         slideUp();
         setTwo();
+        try_count = try_count + 1;
+
 
     }
     else if (e.code == "ArrowDown") {
         slideDown();
         setTwo();
+        try_count = try_count + 1;
+
     }
     else if (e.code == "KeyR") {
         resetGame();
     }
     document.getElementById("score").innerText = score;
+    document.getElementById("gamestatus").innerText = gamestatus;
+    document.getElementById("try_count").innerText = try_count;
+
 })
 
 function filterZero(row){
@@ -150,6 +164,8 @@ function slideDown() {
 
 function setTwo() {
     if (!hasEmptyTile()) {
+        //score=0;
+        //gamestatus = "Over!";
         return;
     }
     let found = false;
@@ -165,6 +181,10 @@ function setTwo() {
             found = true;
         }
     }
+    //if(!found) {
+      //  score = 0;
+      //  gamestatus = "Over!";
+    //}
 }
 
 function hasEmptyTile() {
@@ -181,6 +201,7 @@ function hasEmptyTile() {
 function resetGame() {
     let count = 0;
     score = 0;
+    try_count = 0;
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns; c++) {
                 board[r][c] = 0;
